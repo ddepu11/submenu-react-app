@@ -74,7 +74,17 @@ img {
 .links {
   /* border: 1px solid red; */
   width: 35%;
+  position: relative;
 }
+.sub-menu {
+  position: absolute;
+  background: chocolate;
+  padding: 20px 10px;
+  z-index: 2;
+  width: 100%;
+  color: white;
+}
+
 .links ul li span {
   font-size: 0.8em;
   text-transform: uppercase;
@@ -110,7 +120,7 @@ img {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 80vh;
+  height: 87.6vh;
   position: relative;
 }
 .hero::before {
@@ -138,6 +148,7 @@ aside h1 {
   text-transform: uppercase;
   font-size: 3.5em;
   letter-spacing: 3.5px;
+  color: white;
 }
 aside h6 {
   text-transform: capitalize;
@@ -160,7 +171,73 @@ aside span {
   margin-top: 20px;
   color: rgb(1, 124, 1);
 }
+.App {
+  position: relative;
+}
+.outer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  padding: 10px 20px;
+  transition: all 0.5s ease;
+  transform: scale(0);
+}
+.show-middle-menu {
+  transform: scale(1);
+}
+.close {
+  color: #eb4b12;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 1.8em;
+  cursor: pointer;
+}
+.inner {
+  position: relative;
+  width: 80%;
+  height: 100%;
+  padding: 100px 40px 20px;
+  background: rgb(255, 255, 255);
+  border-radius: 5px;
+}
+section {
+  margin-bottom: 45px;
+}
+section h4 {
+  color: #111;
+  font-size: 1.3em;
+  margin-bottom: 15px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(50px, auto));
+  grid-template-rows: minmax(40px, auto);
+  column-gap: 20px;
+  row-gap: 12px;
+}
+.grid a {
+  color: #111;
+}
+.grid a > :nth-child(1) {
+  font-size: 1.2em;
+  margin-right: 13px;
+}
 
+.grid a > :nth-child(2) {
+  font-size: 0.9em;
+  margin-right: 13px;
+  /* text-align: center; */
+}
+@media (min-width: 840px) {
+  .show-middle-menu {
+    transform: scale(0);
+  }
+}
 @media (max-width: 840px) {
   .links {
     display: none;
