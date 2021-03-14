@@ -7,6 +7,7 @@ const AppProvider = ({ children }) => {
   const [isShowMiddleMenu, setIsShowMiddleMenu] = useState(false);
   const [isShowSubMenu, setIsShowSubMenu] = useState(false);
   const [subMenu, setSubMenu] = useState([{ page: "", links: {} }]);
+  const [location, setLocation] = useState({});
 
   const displayMiddleMenu = () => {
     setIsShowMiddleMenu(true);
@@ -16,13 +17,17 @@ const AppProvider = ({ children }) => {
     setIsShowMiddleMenu(false);
   };
 
-  const displaySubMenu = (menuText) => {
+  const displaySubMenu = (menuText, location) => {
+    // Filter By Link
     const f = menuText.toLocaleLowerCase();
     const filteredMenu = menu.filter((item) => {
       const cw = item.page.toLocaleLowerCase();
       return f === cw;
     });
     setSubMenu([...filteredMenu]);
+    // Location Of SubMenu
+    // console.log(location);
+    setLocation(location);
 
     setIsShowSubMenu(true);
   };
@@ -42,6 +47,7 @@ const AppProvider = ({ children }) => {
         displaySubMenu,
         hideSubMenu,
         subMenu,
+        location,
       }}
     >
       {children}

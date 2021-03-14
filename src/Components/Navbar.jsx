@@ -9,14 +9,22 @@ export default function Navbar() {
     isShowSubMenu,
     displaySubMenu,
     subMenu,
+    location,
   } = useGlobalContext();
 
+  const { center, bottom } = location;
+  const styleSm = { left: `${center}px`, top: `${bottom}px` };
+
+  console.log(styleSm);
   function getMenuText(e) {
     const text = e.target.innerText.trim();
-    const { left, right, top } = e.target.getBoundingClientRect();
-
-    displaySubMenu(text);
+    let { left, right, bottom } = e.target.getBoundingClientRect();
+    let center = (left + right) / 2;
+    bottom = bottom + 5;
+    center = center - 150;
+    displaySubMenu(text, { center, bottom });
   }
+
   return (
     <nav className="nav flex container">
       <div className="logo">
@@ -35,7 +43,12 @@ export default function Navbar() {
           })}
         </ul>
         {/* *********** Sub Menu ***************** */}
-        <div className={isShowSubMenu ? "sub-menu" : "sub-menu hide-submenu"}>
+        <div
+          style={{ left: `${center}px`, top: `${bottom}px` }}
+          className={
+            isShowSubMenu ? "sub-menu show-sub-menu" : "sub-menu hide-submenu"
+          }
+        >
           {isShowSubMenu
             ? subMenu.map((item, index) => {
                 return (
