@@ -1,3 +1,3 @@
 # Subway Submenu React App
 
-# [Live](https://ddepu11.github.io/submenu-react-app)
+# [Live Demo](https://ddepu11.github.io/submenu-react-app)
