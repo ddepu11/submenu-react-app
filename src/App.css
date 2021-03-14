@@ -75,6 +75,7 @@ img {
   /* border: 1px solid red; */
   width: 35%;
 }
+
 .sub-menu {
   position: absolute;
   background: chocolate;
@@ -87,6 +88,7 @@ img {
   padding: 10px 20px;
   width: auto;
 }
+
 .sub-menu:before {
   content: "";
   width: 00px;
@@ -289,5 +291,70 @@ section h4 {
 
   .menu {
     display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav {
+    padding: 13px 10px;
+  }
+  .logo {
+    width: 150px;
+  }
+  aside h5 {
+    font-size: 0.8em;
+  }
+  aside h1 {
+    font-size: 2.5em;
+  }
+  aside h6 {
+    font-size: 0.8em;
+  }
+  aside button {
+    font-size: 0.8em;
+    padding: 8px 12px;
+    margin-top: 20px;
+    background: rgb(1, 124, 1);
+    color: white;
+  }
+  aside span {
+    font-size: 10px;
+    margin-top: 10px;
+  }
+  .hero {
+    height: 100vh;
+  }
+  .outer {
+    padding: 10px 00px;
+    transition: all 0.5s ease;
+    height: auto;
+  }
+  .inner {
+    width: 85%;
+    padding: 40px 26px 10px;
+    border-radius: 0px;
+  }
+  section h4 {
+    font-size: 0.8em;
+    margin-bottom: 8px;
+  }
+  .grid a > :nth-child(1) {
+    font-size: 0.8em;
+    margin-right: 8px;
+  }
+  .grid a > :nth-child(2) {
+    font-size: 0.65em;
+    margin-right: 8px;
+  }
+  section {
+    margin-bottom: 20px;
+  }
+  .grid {
+    grid-template-columns: repeat(2, minmax(40px, auto));
+    grid-template-rows: minmax(20px, auto);
+    grid-column-gap: 10px;
+    column-gap: 20px;
+    grid-row-gap: 12px;
+    row-gap: 12px;
   }
 }
