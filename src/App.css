@@ -78,14 +78,14 @@ img {
 .sub-menu {
   position: absolute;
   background: chocolate;
-  padding: 20px 10px;
+  padding: 10px 20px;
   z-index: 2;
   color: white;
   display: none;
   border-radius: 10px;
-  transition: all 1s ease;
+  transition: all 0.7s ease;
   padding: 10px 20px;
-  width: 290px;
+  width: auto;
 }
 .sub-menu:before {
   content: "";
@@ -104,16 +104,19 @@ img {
 }
 .sm-inner h4 {
   margin-bottom: 20px;
+  letter-spacing: 2px;
 }
 .sm-list {
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 22px;
 }
 
-.sm-list > * {
+/* .sm-list > * {
   flex: 100%;
-}
+} */
 
 .sm-list a > :nth-child(1) {
   margin-right: 10px;
@@ -128,6 +131,7 @@ img {
   cursor: default;
   color: #017c01;
   font-weight: bold;
+  letter-spacing: 1px;
 }
 .links ul {
   justify-content: space-around !important;
