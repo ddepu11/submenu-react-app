@@ -1,14 +1,15 @@
 import React from "react";
 import { useGlobalContext } from "../Context/context";
+import bg from "../images/bg.jpg";
 
 export default function Hero() {
   const { hideSubMenu } = useGlobalContext();
 
   return (
     <main
+      style={{ background: `url(${bg})` }}
       onMouseOver={hideSubMenu}
       className="hero"
-      style={{ background: "url('bg.jpg')" }}
     >
       <aside>
         <h5>Buy a footlong get one</h5>

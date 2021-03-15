@@ -1,6 +1,7 @@
 import React from "react";
 import { useGlobalContext } from "../Context/context";
 import { FaBars } from "react-icons/fa";
+import logo from "../images/logo.svg";
 
 export default function Navbar() {
   const {
@@ -28,7 +29,7 @@ export default function Navbar() {
     <nav className="nav flex container">
       <div className="logo">
         <a href="./index">
-          <img src="logo.svg" alt="" />
+          <img src={logo} alt="" />
         </a>
       </div>
       <div className="links">
