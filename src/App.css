@@ -325,33 +325,33 @@ section h4 {
     height: 100vh;
   }
   .outer {
-    padding: 10px 00px;
+    padding: 80px 00px;
     transition: all 0.5s ease;
-    height: auto;
+    height: 100%;
   }
   .inner {
     width: 85%;
-    padding: 40px 26px 10px;
+    padding: 70px 26px 10px;
     border-radius: 0px;
   }
   section h4 {
     font-size: 0.8em;
-    margin-bottom: 8px;
+    margin-bottom: 15px;
   }
   .grid a > :nth-child(1) {
-    font-size: 0.8em;
+    font-size: 0.9em;
     margin-right: 8px;
   }
   .grid a > :nth-child(2) {
-    font-size: 0.65em;
+    font-size: 0.8em;
     margin-right: 8px;
   }
   section {
-    margin-bottom: 20px;
+    margin-bottom: 50px;
   }
   .grid {
-    grid-template-columns: repeat(2, minmax(40px, auto));
-    grid-template-rows: minmax(20px, auto);
+    grid-template-columns: repeat(2, minmax(50px, auto));
+    grid-template-rows: minmax(30px, auto);
     grid-column-gap: 10px;
     column-gap: 20px;
     grid-row-gap: 12px;

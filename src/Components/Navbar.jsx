@@ -13,9 +13,8 @@ export default function Navbar() {
   } = useGlobalContext();
 
   const { center, bottom } = location;
-  const styleSm = { left: `${center}px`, top: `${bottom}px` };
 
-  console.log(styleSm);
+  // console.log(styleSm);
   function getMenuText(e) {
     const text = e.target.innerText.trim();
     let { left, right, bottom } = e.target.getBoundingClientRect();
@@ -42,6 +41,7 @@ export default function Navbar() {
             );
           })}
         </ul>
+
         {/* *********** Sub Menu ***************** */}
         <div
           style={{ left: `${center}px`, top: `${bottom}px` }}
